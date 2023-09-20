@@ -5,18 +5,10 @@ import numpy as np
 from io import BytesIO
 from PIL import Image
 import tensorflow as tf
-from fastapi.responses import FileResponse
-from fastapi.templating import Jinja2Templates
 import os
 
-
 app = FastAPI()
-'''templates = Jinja2Templates(directory="frontend_build")'''
 
-'''@app.get("/", include_in_schema=False)
-async def serve_frontend():
-    # Serve the main HTML file
-    return templates.TemplateResponse("index.html", {"request": None})'''
 origins = [
     "http://localhost",
     "http://localhost:3000",
