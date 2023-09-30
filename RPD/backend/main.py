@@ -21,7 +21,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MODEL = tf.keras.models.load_model("C:/Users/nith/Desktop/RPD/backend/perfect_ models/1")
+MODEL = tf.keras.models.load_model("C:/Users/nith/Desktop/Remote plant disease diagnosis/RPD/backend/perfect_ models/1")
 
 CLASS_NAMES = ["Early Blight", "Late Blight", "Healthy"]
 
