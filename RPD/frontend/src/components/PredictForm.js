@@ -55,5 +55,4 @@ function PredictForm() {
     </div>
   );
 }
-
 export default PredictForm;
