@@ -49,7 +49,7 @@ function PredictForm() {
       {result && (
         <div>
           <p>Class: {result.class}</p>
-          <p>Confidence: {result.confidence}</p>
+          <p>Confidence: {result.confidence *100+" %"}</p>
         </div>
       )}
     </div>
