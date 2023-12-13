@@ -6,8 +6,8 @@ import PredictForm from './components/PredictForm';
 function App() {
   return (
     <div className="App">
-      <h1 >Plant Disease Diagnosis</h1>
-      <PredictForm/>
+      <h1 id="title" >Plant Disease Diagnosis</h1>
+      <PredictForm />
     </div>
   );
 }

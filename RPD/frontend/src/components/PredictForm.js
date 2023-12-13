@@ -1,5 +1,6 @@
 // src/components/PredictForm.js
 import React, { useState } from 'react';
+import "./PredictForm.css";
 
 function PredictForm() {
   const [file, setFile] = useState(null);
@@ -47,7 +48,7 @@ function PredictForm() {
       <button onClick={handlePredict}>Predict</button>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {result && (
-        <div>
+        <div id = "theclass">
           <p>Class: {result.class}</p>
           <p>Confidence: {result.confidence *100+" %"}</p>
         </div>
