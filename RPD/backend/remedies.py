@@ -1,0 +1,5 @@
+REMEDIES = {
+    "Early Blight": "Apply copper-based fungicides, and biofungicides. Remove infected leaves as soon as they appear. This helps prevent the disease from spreading to other parts of the plant. Apply fungicides as soon as symptoms appear. Choose a fungicide labelled for early blight control and follow the manufacturer's instruction carefully.",
+    "Late Blight": "Use fungicides containing chlorothalonil. Remove infected leaves and stems as soon as symptoms appear to prevent the spread of the disease to healthy plant parts. Apply fungicides promptly when late blight symptoms are  detected choose a fungicide specifically labeled for late blight control and follow the manufacturers instructions carefully. Copper based fungicides, Mancozeb, Biofungicides",
+    "Healthy": "No remedies needed, maintain regular care.",
+}

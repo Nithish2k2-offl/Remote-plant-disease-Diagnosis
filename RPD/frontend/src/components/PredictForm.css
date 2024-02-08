@@ -1,4 +1,22 @@
-#theclass
-{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+#theclass {
+    font-family: Arial
+}
+
+.predictbutton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3d2def;
+    border: 2px solid #3d2def;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+
+}
+
+.predictbutton:hover {
+    background-color: #958cf7;
+   
 }

@@ -1,4 +1,3 @@
-// src/components/PredictForm.js
 import React, { useState } from 'react';
 import "./PredictForm.css";
 
@@ -34,7 +33,7 @@ function PredictForm() {
         const data = await response.json();
         setResult(data);
       } else {
-        setResult(null); // Clear previous result
+        setResult(null); // Clearing previous result
         setError('Prediction failed');
       }
     } catch (error) {
@@ -45,12 +44,14 @@ function PredictForm() {
   return (
     <div>
       <input type="file" accept="image/*" onChange={handleFileChange} />
-      <button onClick={handlePredict}>Predict</button>
+      <button class="predictbutton" onClick={handlePredict}>Predict</button>
       {error && <p style={{ color: 'red' }}>{error}</p>}
+
       {result && (
-        <div id = "theclass">
+        <div>
           <p>Class: {result.class}</p>
-          <p>Confidence: {result.confidence *100+" %"}</p>
+          <p>Confidence: {result.confidence * 100 + " %"}</p>
+          <p>Remedies: {result.remedies}</p>
         </div>
       )}
     </div>

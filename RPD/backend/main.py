@@ -6,6 +6,7 @@ from io import BytesIO
 from PIL import Image
 import tensorflow as tf
 import os
+from remedies import REMEDIES
 
 app = FastAPI()
 
@@ -21,7 +22,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MODEL = tf.keras.models.load_model("C:/Users/nith/Desktop/Remote plant disease diagnosis/RPD/backend/perfect_ models/1")
+MODEL = tf.keras.models.load_model("C:/Users/nith/Desktop/Remote plant disease diagnosis/basic models/1")
 
 CLASS_NAMES = ["Early Blight", "Late Blight", "Healthy"]
 
@@ -49,10 +50,13 @@ async def predict(
     predictions = MODEL.predict(img_batch)
 
     predicted_class = CLASS_NAMES[np.argmax(predictions[0])]
+    remedies = REMEDIES.get(predicted_class, "Remedies not available.")
     confidence = np.max(predictions[0])
+
     return {
         'class': predicted_class,
-        'confidence': float(confidence)
+        'confidence': float(confidence),
+        'remedies': remedies
     }
 
 
